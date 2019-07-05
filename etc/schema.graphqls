@@ -1,0 +1,14 @@
+type Query {
+    pickUpStores:pickUpStoresOutput @resolver(class: "\\Test\\GraphQL\\Model\\Resolver\\Store") @doc(description: "")
+}
+type pickUpStoresOutput {
+    total_count:  Int @doc(description: "")
+    items: [pickUpStore] @doc(description: "")
+}
+type pickUpStore {
+    name: String @doc(description: "some custom text"),
+    street: String @doc(description: "some custom text"),
+    street_num: String @doc(description: "some custom text"),
+    city: String @doc(description: ""),
+    postcode: String @doc(description: ""),
+}
